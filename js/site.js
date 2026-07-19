@@ -272,7 +272,13 @@ function renderEducation() {
       button.className = 'button button-light magnetic';
       button.dataset.cursor = documentItem.label;
       button.textContent = documentItem.label;
-      button.addEventListener('click', () => openDocument(documentItem));
+      button.addEventListener('click', () => {
+        if (documentItem === thesis.fullDocument) {
+          window.open(documentItem.url || documentItem.downloadUrl, '_blank', 'noopener');
+          return;
+        }
+        openDocument(documentItem);
+      });
       actions.appendChild(button);
     });
     if (!actions.children.length) actions.hidden = true;
