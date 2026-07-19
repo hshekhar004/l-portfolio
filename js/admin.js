@@ -405,7 +405,12 @@ function nestedTextList(collection, index, key, label, singular) {
 
 function renderEducation() {
   const panel = byId('panel-education');
-  let html = panelHeading('10 · EDUCATION', 'Turn education into visible evidence.', 'Manage qualifications, optional subjects, a dedicated thesis showcase, downloadable research documents, and a separate GATE achievement card.') + collectionHeader('Education entries', 'education', 'qualification');
+  let html = panelHeading('10 · EDUCATION', 'Turn education into visible evidence.', 'Manage qualifications, optional subjects, a dedicated thesis showcase, downloadable research documents, and a separate GATE achievement card.') +
+    `<article class="editor-card"><div class="editor-card-head"><h3>Education section introduction</h3></div><div class="field-grid">
+      ${field('sectionCopy.education.eyebrow', 'Section label', 'text', { wide: true })}
+      ${field('sectionCopy.education.title', 'Main heading', 'textarea', { wide: true })}
+      ${field('sectionCopy.education.intro', 'Introductory description', 'textarea', { wide: true })}
+    </div></article>` + collectionHeader('Education entries', 'education', 'qualification');
   state.content.education.forEach((item, index) => {
     html += `<article class="editor-card"><div class="editor-card-head"><h3>${escapeHtml(item.degree)}</h3>${cardActions('education', index)}</div><div class="field-grid">
       ${field(`education.${index}.degree`, 'Degree')}${field(`education.${index}.institution`, 'Institution')}
