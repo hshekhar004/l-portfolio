@@ -581,11 +581,11 @@ window.SITE_CONTENT = {
   ],
   "contact": {
     "email": "h.shekhar004@gmail.com",
-    "phone": "+49 177 2004529",
-    "phoneHref": "+491772004529",
+    "phone": "+91 88 38360011",
+    "phoneHref": "+918838360011",
     "linkedinLabel": "linkedin.com/in/himanshushekhar-profile",
     "linkedinUrl": "https://www.linkedin.com/in/himanshushekhar-profile",
-    "location": "Relocating to India · International mobility",
+    "location": "Open to relocation",
     "availability": "Open to relevant opportunities"
   },
   "footer": {
