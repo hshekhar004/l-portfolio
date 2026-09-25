@@ -148,6 +148,154 @@ function renderAccountSystem() {
   return section;
 }
 
+
+function renderLubricantLab() {
+  const section = document.createElement('section');
+  section.id = 'lubricant-lab';
+  section.className = 'portfolio-section lubricant-lab section-dark';
+  section.dataset.section = 'lubricant-lab';
+  section.innerHTML = `
+    <div class="lab-head reveal">
+      <p class="eyebrow">LUBRICATION KNOWLEDGE HUB</p>
+      <div class="section-title-wrap">
+        <h2>From viscosity code to machine application.</h2>
+        <p>A visual technical primer covering automotive, heavy-duty, industrial and marine lubrication fundamentals.</p>
+      </div>
+    </div>
+
+    <div class="lab-hero reveal">
+      <div class="lab-hero-copy">
+        <span class="micro-label">TRIBOLOGY IN PRACTICE</span>
+        <h3>A lubricant is an engineered film, not just “oil”.</h3>
+        <p>Correct selection balances <strong>viscosity</strong>, operating temperature, speed, load, contamination, base-oil chemistry, additive system and OEM requirements.</p>
+        <div class="lab-chip-row"><span>Viscosity</span><span>Wear control</span><span>Heat removal</span><span>Cleanliness</span><span>Corrosion protection</span></div>
+      </div>
+      <div class="film-visual" aria-label="Lubrication film diagram">
+        <div class="bearing bearing-top"><span>Moving surface</span></div>
+        <div class="oil-film"><i></i><i></i><i></i><i></i><i></i></div>
+        <div class="bearing bearing-bottom"><span>Load-bearing surface</span></div>
+        <div class="film-arrow">oil film separates surfaces →</div>
+      </div>
+    </div>
+
+    <div class="lab-grid viscosity-block reveal">
+      <article class="lab-panel viscosity-decoder">
+        <div class="lab-panel-head"><span>01</span><div><small>SAE J300 · ENGINE OILS</small><h3>What does 10W-40 actually mean?</h3></div></div>
+        <div class="grade-big"><b id="gradeWinter">10W</b><i>−</i><b id="gradeHot">40</b></div>
+        <div class="grade-explain">
+          <p><strong>10W</strong><span>Low-temperature (“winter”) viscosity performance. Lower W number generally means easier cold cranking and pumping.</span></p>
+          <p><strong>40</strong><span>High-temperature viscosity grade, defined by viscosity limits measured at operating-temperature conditions.</span></p>
+        </div>
+        <div class="grade-selector" aria-label="Select an engine oil viscosity grade">
+          <button class="grade-btn active" data-grade="0W-20">0W-20</button>
+          <button class="grade-btn" data-grade="5W-30">5W-30</button>
+          <button class="grade-btn" data-grade="10W-40">10W-40</button>
+          <button class="grade-btn" data-grade="15W-40">15W-40</button>
+          <button class="grade-btn" data-grade="20W-50">20W-50</button>
+        </div>
+        <p class="technical-note">The grade describes viscosity performance, not “quality”. Performance level, OEM approval and application requirements must also match.</p>
+      </article>
+
+      <article class="lab-panel iso-map">
+        <div class="lab-panel-head"><span>02</span><div><small>ISO 3448 · INDUSTRIAL OILS</small><h3>Industrial viscosity map</h3></div></div>
+        <div class="iso-axis"><span>lighter</span><span>heavier</span></div>
+        <div class="iso-bars">
+          <div style="--w:30%"><b>ISO VG 32</b><span>Turbines · selected hydraulics</span></div>
+          <div style="--w:40%"><b>ISO VG 46</b><span>Hydraulics · compressors</span></div>
+          <div style="--w:50%"><b>ISO VG 68</b><span>Hydraulics · circulation</span></div>
+          <div style="--w:68%"><b>ISO VG 150</b><span>Industrial gears</span></div>
+          <div style="--w:80%"><b>ISO VG 220</b><span>Loaded enclosed gears</span></div>
+          <div style="--w:94%"><b>ISO VG 320</b><span>Heavy/slow gear duty</span></div>
+        </div>
+        <p class="technical-note">ISO VG is based on kinematic viscosity at 40°C. Final grade selection depends on OEM guidance, load, speed and operating temperature.</p>
+      </article>
+    </div>
+
+    <div class="application-ribbon reveal">
+      <div class="application-title"><span>APPLICATION MAP</span><h3>One portfolio, very different lubrication jobs.</h3></div>
+      <div class="application-flow">
+        <article><i class="app-icon engine-icon"></i><b>Heavy-duty diesel</b><span>Engine oils · coolant-adjacent duty · fleet uptime</span></article>
+        <article><i class="app-icon gear-icon"></i><b>Industrial gearboxes</b><span>EP gear oils · micropitting/OEM requirements</span></article>
+        <article><i class="app-icon hydraulic-icon"></i><b>Hydraulic systems</b><span>AW hydraulic oils · cleanliness · air release</span></article>
+        <article><i class="app-icon grease-icon"></i><b>Bearings & grease points</b><span>NLGI consistency · thickener · base-oil viscosity</span></article>
+        <article><i class="app-icon marine-icon"></i><b>Marine</b><span>System/cylinder oils · trunk piston oils · stern tube · hydraulics</span></article>
+      </div>
+    </div>
+
+    <div class="lab-grid reveal">
+      <article class="lab-panel hd-panel">
+        <div class="lab-panel-head"><span>03</span><div><small>HEAVY-DUTY LUBRICATION</small><h3>What matters beyond 15W-40</h3></div></div>
+        <div class="spec-ladder">
+          <div><b>Viscosity grade</b><span>Cold-start + hot-running viscosity envelope</span></div>
+          <div><b>API performance</b><span>Examples include CK-4 / CJ-4 depending on engine and OEM requirement</span></div>
+          <div><b>OEM approval</b><span>Engine-maker specifications can be more specific than generic categories</span></div>
+          <div><b>Duty cycle</b><span>Load, idling, soot, fuel quality and drain interval affect selection</span></div>
+        </div>
+      </article>
+
+      <article class="lab-panel marine-panel">
+        <div class="lab-panel-head"><span>04</span><div><small>MARINE LUBRICATION</small><h3>Different engine architecture, different oil job.</h3></div></div>
+        <div class="marine-machine">
+          <div class="ship-hull"><span></span><span></span><span></span></div>
+          <div class="marine-lines"><i></i><i></i><i></i></div>
+        </div>
+        <div class="marine-cards">
+          <div><b>Crosshead 2-stroke</b><span>Separate cylinder and system lubrication; cylinder-oil BN is matched to engine/fuel/OEM guidance.</span></div>
+          <div><b>Trunk piston 4-stroke</b><span>Trunk piston engine oils combine crankcase and cylinder lubrication duties.</span></div>
+          <div><b>Auxiliary systems</b><span>Hydraulics, compressors, gears, stern-tube and other shipboard lubrication points.</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="lab-grid reveal">
+      <article class="lab-panel additive-panel">
+        <div class="lab-panel-head"><span>05</span><div><small>ADDITIVE CHEMISTRY</small><h3>The formulation toolbox</h3></div></div>
+        <div class="molecule-cloud">
+          <span style="--x:12%;--y:17%">Detergent</span><span style="--x:62%;--y:9%">Dispersant</span><span style="--x:36%;--y:39%">AW</span><span style="--x:75%;--y:48%">EP</span><span style="--x:16%;--y:68%">Antioxidant</span><span style="--x:52%;--y:78%">VI improver</span><span style="--x:76%;--y:82%">Anti-foam</span>
+          <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M18 25L41 45L67 21M41 45L75 55M41 45L22 73M22 73L54 82M75 55L78 83"/></svg>
+        </div>
+        <p class="technical-note">Additives are balanced as a system. More of one additive is not automatically better because formulation interactions and OEM limits matter.</p>
+      </article>
+
+      <article class="lab-panel analysis-panel">
+        <div class="lab-panel-head"><span>06</span><div><small>USED-OIL THINKING</small><h3>What I would examine before recommending action</h3></div></div>
+        <div class="analysis-dials">
+          <div><i style="--p:72%"></i><b>Viscosity</b><span>shift / shear / contamination</span></div>
+          <div><i style="--p:45%"></i><b>Water</b><span>ingress and emulsion risk</span></div>
+          <div><i style="--p:63%"></i><b>Wear metals</b><span>trend, source, operating context</span></div>
+          <div><i style="--p:55%"></i><b>TAN / TBN</b><span>acid/base reserve where applicable</span></div>
+          <div><i style="--p:68%"></i><b>Oxidation</b><span>thermal / chemical degradation</span></div>
+          <div><i style="--p:38%"></i><b>Particles</b><span>cleanliness and filtration</span></div>
+        </div>
+      </article>
+    </div>
+
+    <div class="stribeck reveal">
+      <div class="stribeck-copy"><span>07 · TRIBOLOGY</span><h3>Boundary → mixed → full-film lubrication</h3><p>The Stribeck concept links viscosity, speed and load to friction regime. The operating target is application-dependent, but the principle explains why “thicker oil” is not always the answer.</p></div>
+      <div class="stribeck-chart" role="img" aria-label="Simplified Stribeck curve">
+        <svg viewBox="0 0 700 300" preserveAspectRatio="none">
+          <defs><linearGradient id="curveGlow" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7e4617"/><stop offset=".5" stop-color="#d39a43"/><stop offset="1" stop-color="#f3d494"/></linearGradient></defs>
+          <path class="gridline" d="M55 30V250H670M55 195H670M55 140H670M55 85H670"/>
+          <path class="curve" d="M70 62 C115 145, 145 230, 235 227 C330 222, 390 180, 455 150 C535 113, 605 104, 660 98"/>
+          <text x="70" y="280">Boundary</text><text x="285" y="280">Mixed</text><text x="505" y="280">Hydrodynamic / EHL</text>
+          <text x="8" y="40" transform="rotate(-90 18 145)">Friction coefficient</text>
+          <text x="350" y="297">viscosity × speed ÷ load →</text>
+        </svg>
+      </div>
+    </div>`;
+
+  const gradeButtons = section.querySelectorAll('.grade-btn');
+  const winter = section.querySelector('#gradeWinter');
+  const hot = section.querySelector('#gradeHot');
+  gradeButtons.forEach((button) => button.addEventListener('click', () => {
+    gradeButtons.forEach((item) => item.classList.remove('active'));
+    button.classList.add('active');
+    const [w, h] = button.dataset.grade.split('-');
+    winter.textContent = w; hot.textContent = h;
+  }));
+  return section;
+}
+
 function renderSkills() {
   const section = baseSection('skills');
   const grid = document.createElement('div');
@@ -410,6 +558,7 @@ const renderers = {
   expertise: renderExpertise,
   'track-record': renderTrackRecord,
   'account-system': renderAccountSystem,
+  'lubricant-lab': renderLubricantLab,
   skills: renderSkills,
   experience: renderExperience,
   education: renderEducation,
@@ -438,6 +587,14 @@ function renderHero() {
   text(byId('downloadLabel'), state.content.ui.downloadLabel);
   document.title = state.content.meta.siteTitle;
   document.querySelector('meta[name="description"]').content = state.content.meta.description;
+  const hero = document.querySelector('.hero');
+  if (hero && !hero.querySelector('.lubricant-hero-art')) {
+    const art = document.createElement('div');
+    art.className = 'lubricant-hero-art reveal';
+    art.setAttribute('aria-hidden', 'true');
+    art.innerHTML = `<div class="oil-orbit orbit-a"></div><div class="oil-orbit orbit-b"></div><div class="hero-drop"><i></i></div><span class="hero-art-label">TRIBOLOGY · VISCOSITY · APPLICATION</span>`;
+    hero.appendChild(art);
+  }
 }
 
 function renderNavigation() {
@@ -582,6 +739,17 @@ async function boot() {
     const published = await (window.SITE_CONTENT_READY || Promise.resolve(window.SITE_CONTENT));
     if (!published) throw new Error('Could not load content.');
     state.content = structuredClone(published);
+
+    // Premium lubricant identity layer: adds a dedicated technical knowledge hub without disturbing owner-managed content.
+    state.content.sections['lubricant-lab'] = { visible: true, eyebrow: 'LUBRICATION KNOWLEDGE HUB', title: 'From viscosity code to machine application.', intro: 'A visual technical primer across automotive, heavy-duty, industrial and marine lubrication.' };
+    if (!state.content.sectionOrder.includes('lubricant-lab')) {
+      const skillsIndex = state.content.sectionOrder.indexOf('skills');
+      state.content.sectionOrder.splice(skillsIndex >= 0 ? skillsIndex : 4, 0, 'lubricant-lab');
+    }
+    if (!state.content.navigation.some((item) => item.target === 'lubricant-lab')) {
+      const skillsNav = state.content.navigation.findIndex((item) => item.target === 'skills');
+      state.content.navigation.splice(skillsNav >= 0 ? skillsNav : 2, 0, { label: 'Lubrication Lab', target: 'lubricant-lab' });
+    }
     const previewUntil = Number(localStorage.getItem(PREVIEW_KEY) || 0);
     if (previewUntil > Date.now()) {
       const draft = await loadOwnerDraft();
