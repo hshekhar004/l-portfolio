@@ -582,18 +582,24 @@ function renderHero() {
   document.querySelector('.brand-mark').dataset.cursor = state.content.ui.cursorHome;
   byId('headerCta').dataset.cursor = state.content.ui.cursorContact;
   byId('primaryButton').dataset.cursor = state.content.ui.cursorImpact;
+  byId('primaryButton').setAttribute('href', '#impact');
   byId('resumeButton').dataset.cursor = state.content.ui.cursorResume;
   document.querySelector('.scroll-cue').dataset.cursor = state.content.ui.cursorScroll;
   text(byId('downloadLabel'), state.content.ui.downloadLabel);
   document.title = state.content.meta.siteTitle;
   document.querySelector('meta[name="description"]').content = state.content.meta.description;
   const hero = document.querySelector('.hero');
-  if (hero && !hero.querySelector('.lubricant-hero-art')) {
-    const art = document.createElement('div');
-    art.className = 'lubricant-hero-art reveal';
-    art.setAttribute('aria-hidden', 'true');
-    art.innerHTML = `<div class="oil-orbit orbit-a"></div><div class="oil-orbit orbit-b"></div><div class="hero-drop"><i></i></div><span class="hero-art-label">TRIBOLOGY · VISCOSITY · APPLICATION</span>`;
-    hero.appendChild(art);
+  if (!hero) return;
+  hero.querySelector('.lubricant-hero-art')?.remove();
+  if (!hero.querySelector('.hero-media')) {
+    const media = document.createElement('div');
+    media.className = 'hero-media reveal';
+    media.setAttribute('aria-hidden', 'true');
+    media.innerHTML = `
+      <img src="assets/amber-oil-flow-over-interlocking-gears.png" alt="">
+      <div class="hero-media-glow"></div>
+      <div class="hero-media-chip">Industrial · Heavy-duty · Marine</div>`;
+    hero.appendChild(media);
   }
 }
 
@@ -601,10 +607,12 @@ function renderNavigation() {
   for (const nav of [byId('desktopNav'), byId('mobileNav')]) {
     nav.replaceChildren();
     state.content.navigation.forEach((item) => {
-      const section = state.content.sections[item.target];
-      if (section && section.visible === false) return;
+      if (item.target) {
+        const section = state.content.sections[item.target];
+        if (section && section.visible === false) return;
+      }
       const link = document.createElement('a');
-      link.href = `#${item.target}`;
+      link.href = item.href || `#${item.target}`;
       link.textContent = item.label;
       link.dataset.cursor = `View ${item.label}`;
       link.addEventListener('click', closeMobileNav);
@@ -692,7 +700,7 @@ function initObservers() {
     revealObserver.observe(node);
   });
 
-  const navLinks = [...document.querySelectorAll('.desktop-nav a')];
+  const navLinks = [...document.querySelectorAll('.desktop-nav a')].filter((link) => link.getAttribute('href')?.startsWith('#'));
   const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
@@ -709,6 +717,7 @@ function initCursor() {
   if (finePointer && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
     window.addEventListener('mousemove', (event) => {
       cursor.style.transform = `translate3d(${event.clientX}px,${event.clientY}px,0)`;
+      cursor.classList.add('is-active');
       const clickable = event.target.closest('a, button');
       cursor.classList.toggle('is-link', Boolean(clickable));
       document.body.classList.toggle('cursor-over-link', Boolean(clickable));
@@ -716,6 +725,7 @@ function initCursor() {
       label.textContent = clickable?.dataset.cursor || (visibleLabel ? `Open ${visibleLabel}` : 'Open');
     }, { passive: true });
     document.documentElement.addEventListener('mouseleave', () => {
+      cursor.classList.remove('is-active');
       cursor.classList.remove('is-link');
       document.body.classList.remove('cursor-over-link');
     });
@@ -739,17 +749,6 @@ async function boot() {
     const published = await (window.SITE_CONTENT_READY || Promise.resolve(window.SITE_CONTENT));
     if (!published) throw new Error('Could not load content.');
     state.content = structuredClone(published);
-
-    // Premium lubricant identity layer: adds a dedicated technical knowledge hub without disturbing owner-managed content.
-    state.content.sections['lubricant-lab'] = { visible: true, eyebrow: 'LUBRICATION KNOWLEDGE HUB', title: 'From viscosity code to machine application.', intro: 'A visual technical primer across automotive, heavy-duty, industrial and marine lubrication.' };
-    if (!state.content.sectionOrder.includes('lubricant-lab')) {
-      const skillsIndex = state.content.sectionOrder.indexOf('skills');
-      state.content.sectionOrder.splice(skillsIndex >= 0 ? skillsIndex : 4, 0, 'lubricant-lab');
-    }
-    if (!state.content.navigation.some((item) => item.target === 'lubricant-lab')) {
-      const skillsNav = state.content.navigation.findIndex((item) => item.target === 'skills');
-      state.content.navigation.splice(skillsNav >= 0 ? skillsNav : 2, 0, { label: 'Lubrication Lab', target: 'lubricant-lab' });
-    }
     const previewUntil = Number(localStorage.getItem(PREVIEW_KEY) || 0);
     if (previewUntil > Date.now()) {
       const draft = await loadOwnerDraft();
