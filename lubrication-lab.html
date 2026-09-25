@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <link rel="icon" href="./favicon.ico" type="image/x-icon">
   <meta name="theme-color" content="#090704">
-  <meta name="description" content="Lubrication Lab: visual technical portfolio page covering viscosity, industrial, heavy-duty and marine lubrication.">
+  <meta name="description" content="Lubrication Lab: a visual handbook across industrial, heavy-duty and marine lubrication.">
   <title>Lubrication Lab | Himanshu Shekhar</title>
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -17,18 +17,32 @@
       <a class="lab-home-link" href="#lab-top">Top ↑</a>
     </header>
 
+    <nav class="lab-chapter-nav">
+      <a href="#foundations">Foundations</a>
+      <a href="#sae">SAE grades</a>
+      <a href="#industrial">Industrial oils</a>
+      <a href="#hd">HD oils</a>
+      <a href="#marine">Marine</a>
+      <a href="#additives">Additives</a>
+      <a href="#analysis">Analysis</a>
+      <a href="#selection">Selection</a>
+    </nav>
+
+    <a class="lab-floating-back" href="index.html">Return to main portfolio</a>
+
     <main class="lab-main" id="lab-top">
       <section class="lab-page-hero">
         <div>
-          <span class="lab-page-kicker">Technical depth without cluttering the main portfolio</span>
-          <h1>Visual proof of lubricant expertise.</h1>
-          <p>This dedicated page showcases application knowledge across engine oils, industrial lubrication, heavy-duty diesel systems and marine machinery. It is designed to reinforce the message that the portfolio is not only commercial, but also technically credible.</p>
+          <span class="lab-page-kicker">A dedicated technical handbook page</span>
+          <h1>Lubrication knowledge presented like a premium field guide.</h1>
+          <p>This page is intentionally separate from the main portfolio so recruiters can experience the technical side without cluttering the commercial story. It covers core concepts, application logic and the kind of practical explanation that makes lubricant discussions credible.</p>
           <div class="lab-pill-row">
+            <span>Tribology basics</span>
             <span>SAE viscosity</span>
-            <span>ISO VG grades</span>
-            <span>Heavy-duty oils</span>
+            <span>ISO VG</span>
+            <span>Heavy-duty diesel oils</span>
             <span>Marine lubrication</span>
-            <span>Tribology mindset</span>
+            <span>Used-oil thinking</span>
           </div>
         </div>
         <div class="lab-page-hero-visual">
@@ -38,76 +52,181 @@
       </section>
 
       <div class="lab-sections">
-        <section class="lab-section-card">
+        <section class="lab-section-card" id="foundations">
           <div class="lab-section-copy">
             <span class="lab-card-index">01</span>
-            <small>SAE J300 · Viscosity decoding</small>
-            <h2>What 10W-40, 15W-40 and 20W-50 are really saying.</h2>
-            <p>The first number with <strong>W</strong> tells you about cold-start flow and how easily the oil moves at low temperature. The second number reflects viscosity at operating temperature, which affects film strength, wear protection and how the lubricant behaves under load.</p>
+            <small>Foundations</small>
+            <h2>What a lubricant really does inside a machine.</h2>
+            <p>A lubricant is not just a slippery fluid. In real machinery it creates a film, reduces friction, carries away heat, controls wear, suspends contaminants, protects against corrosion and supports reliability. The correct product is the one that matches the duty cycle, not simply the one with the most familiar grade.</p>
             <div class="lab-bullet-grid">
-              <div><strong>0W-20 / 5W-30</strong> fast cold-start flow and fuel efficiency.</div>
-              <div><strong>10W-40</strong> balanced grade with broader temperature protection.</div>
-              <div><strong>15W-40</strong> popular heavy-duty grade for load and durability.</div>
-              <div><strong>20W-50</strong> thicker film strength for severe service or hotter environments.</div>
+              <div><strong>Film formation</strong> separates moving surfaces to reduce friction and wear.</div>
+              <div><strong>Heat removal</strong> carries thermal load away from critical zones.</div>
+              <div><strong>Cleanliness</strong> transports contaminants and helps keep systems clean.</div>
+              <div><strong>Protection</strong> supports corrosion resistance and component life.</div>
             </div>
-            <div class="lab-technical-note">Also included in the graphic: ISO VG 32 / 46 / 68 / 150 / 220 / 320, additive-package basics and used-oil analysis signals such as viscosity shift, water, oxidation and TAN/TBN.</div>
+            <div class="lab-technical-note">A practical lubricant discussion usually starts with speed, load, temperature, contamination, drain expectations and OEM guidance.</div>
+          </div>
+          <div class="lab-section-media">
+            <div class="lab-diagram-card">
+              <div class="oil-flow-banner"><span>boundary</span><span>mixed</span><span>full-film</span></div>
+              <div class="oil-film-track"><i></i><i></i><i></i><i></i><i></i></div>
+              <div class="lab-callout-grid">
+                <div><strong>Low film thickness</strong><span>high wear risk if protection breaks down</span></div>
+                <div><strong>Stable film</strong><span>better reliability, temperature control and efficiency</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lab-section-card reverse" id="sae">
+          <div class="lab-section-copy">
+            <span class="lab-card-index">02</span>
+            <small>SAE J300 engine-oil grades</small>
+            <h2>How to read 0W-20, 5W-30, 10W-40, 15W-40 and 20W-50.</h2>
+            <p>The number before the <strong>W</strong> speaks to low-temperature behaviour and cold-start flow. The second number describes viscosity at operating temperature. Together they help explain start-up performance, film thickness, efficiency and protection under load.</p>
+            <div class="lab-bullet-grid">
+              <div><strong>0W-20</strong> very low viscosity with excellent cold-start flow and efficiency.</div>
+              <div><strong>5W-30</strong> low viscosity for broad everyday protection.</div>
+              <div><strong>10W-40</strong> balanced grade with wider temperature protection.</div>
+              <div><strong>15W-40 / 20W-50</strong> stronger film for heavier duty or severe conditions.</div>
+            </div>
           </div>
           <div class="lab-section-media">
             <img src="assets/lubricant-viscosity-decoder.png" alt="Lubricant viscosity decoder infographic">
           </div>
         </section>
 
-        <section class="lab-section-card reverse">
-          <div class="lab-section-copy">
-            <span class="lab-card-index">02</span>
-            <small>Industrial lubrication</small>
-            <h2>Gears, bearings and film strength for industrial reliability.</h2>
-            <p>Industrial lubrication decisions depend on speed, load, temperature, contamination and equipment design. In practice, the job is to select the right base oil and viscosity so that the lubricant forms a stable film, reduces wear and supports uptime.</p>
-            <div class="lab-bullet-grid">
-              <div><strong>Gearboxes</strong> higher load conditions often move toward ISO VG 150 / 220 / 320.</div>
-              <div><strong>Hydraulics</strong> ISO VG 32 / 46 / 68 are common, depending on duty and climate.</div>
-              <div><strong>Bearings</strong> need the right film thickness plus contamination control.</div>
-              <div><strong>Tribology lens</strong> viscosity is selected for machine condition, not in isolation.</div>
-            </div>
-          </div>
-          <div class="lab-section-media">
-            <img src="assets/amber-oil-flow-over-interlocking-gears.png" alt="Golden lubricant flowing over interlocking gears">
-          </div>
-        </section>
-
-        <section class="lab-section-card">
+        <section class="lab-section-card" id="industrial">
           <div class="lab-section-copy">
             <span class="lab-card-index">03</span>
-            <small>Heavy-duty diesel oils</small>
-            <h2>HD oils have to manage soot, load, detergency and drain confidence.</h2>
-            <p>In heavy-duty applications the lubricant is not only reducing friction. It is also controlling deposits, neutralising acids, holding contaminants in suspension and protecting components under high temperature and load.</p>
+            <small>Industrial oils and ISO VG logic</small>
+            <h2>Industrial viscosity selection is about machine condition and duty.</h2>
+            <p>For industrial equipment, the conversation often shifts from SAE to ISO VG. Hydraulic systems, gearboxes, bearings and compressors all rely on the right viscosity range, but the final choice depends on load, speed, temperature, contamination and equipment design.</p>
             <div class="lab-bullet-grid">
-              <div><strong>Common workhorse grade</strong> 15W-40 remains a familiar reference point in many fleets.</div>
-              <div><strong>Additive depth</strong> detergent, dispersant, anti-wear and antioxidant chemistry matter.</div>
-              <div><strong>Application fit</strong> duty cycle, ambient temperature and OEM guidance influence grade choice.</div>
-              <div><strong>Commercial credibility</strong> explaining why a grade fits a duty profile builds trust.</div>
+              <div><strong>VG 32 / 46 / 68</strong> commonly associated with hydraulics and general industrial systems.</div>
+              <div><strong>VG 150 / 220 / 320</strong> more common in higher load gear and bearing environments.</div>
+              <div><strong>Too thin</strong> may reduce film strength and increase wear risk.</div>
+              <div><strong>Too thick</strong> can create drag, heat and flow limitations.</div>
             </div>
           </div>
           <div class="lab-section-media">
-            <img src="assets/golden-oil-powering-a-heavy-duty-engine.png" alt="Heavy-duty engine with golden lubricant flow">
+            <img src="assets/golden-oil-in-motion-precision-machinery.png" alt="Industrial machinery and lubricant flow">
           </div>
         </section>
 
-        <section class="lab-section-card reverse">
+        <section class="lab-section-card reverse" id="hd">
           <div class="lab-section-copy">
             <span class="lab-card-index">04</span>
-            <small>Marine lubrication</small>
-            <h2>Marine engines and shipboard systems demand a different lubrication conversation.</h2>
-            <p>Marine lubrication goes beyond one universal oil. Different systems and engine types have different needs: trunk piston engines, crosshead engines, cylinder oils, system oils, gears, hydraulics and compressors each involve their own operating logic.</p>
+            <small>Heavy-duty diesel oils</small>
+            <h2>HD oils have to do more than lubricate.</h2>
+            <p>In heavy-duty engines the lubricant also manages soot, deposit control, oxidation, acid neutralisation and cleanliness. That is why additive balance matters so much. A fleet-facing or industrial discussion becomes stronger when the duty profile is translated into lubricant function.</p>
             <div class="lab-bullet-grid">
-              <div><strong>Trunk piston engines</strong> crankcase oil must handle detergency, wear and oxidation control.</div>
-              <div><strong>Crosshead engines</strong> cylinder lubrication and system lubrication are separate conversations.</div>
-              <div><strong>Ship systems</strong> hydraulics, gears and compressors still need correct viscosity and cleanliness.</div>
-              <div><strong>Marine credibility</strong> technical clarity helps commercial discussions land better with customers.</div>
+              <div><strong>Detergency and dispersancy</strong> help manage deposits and soot.</div>
+              <div><strong>Film strength</strong> supports wear control at load-bearing interfaces.</div>
+              <div><strong>Thermal stability</strong> matters in high-load and long-duty cycles.</div>
+              <div><strong>Drain confidence</strong> improves when the oil stays healthy in service.</div>
             </div>
           </div>
           <div class="lab-section-media">
-            <img src="assets/golden-oil-and-marine-machinery.png" alt="Marine machinery and ship with golden lubricant flow">
+            <div class="lab-diagram-card hd-card">
+              <div class="metric-strip"><span>Load</span><b>High</b></div>
+              <div class="metric-strip"><span>Temperature</span><b>Elevated</b></div>
+              <div class="metric-strip"><span>Soot handling</span><b>Critical</b></div>
+              <div class="metric-strip"><span>Protection need</span><b>Detergent + dispersant + anti-wear</b></div>
+              <div class="lab-callout-grid">
+                <div><strong>15W-40</strong><span>a familiar workhorse reference in heavy-duty discussions</span></div>
+                <div><strong>Duty first</strong><span>grade choice must match operating reality and OEM direction</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lab-section-card" id="marine">
+          <div class="lab-section-copy">
+            <span class="lab-card-index">05</span>
+            <small>Marine lubrication</small>
+            <h2>Marine systems create a more layered lubrication discussion.</h2>
+            <p>Marine lubrication is not one universal product conversation. Trunk piston engines, crosshead engines, cylinder oils, system oils, hydraulic systems, gears and compressors all bring different functional demands. Understanding that architecture makes commercial conversations more credible.</p>
+            <div class="lab-bullet-grid">
+              <div><strong>Trunk piston engines</strong> require crankcase oils that support wear, detergency and oxidation control.</div>
+              <div><strong>Crosshead engines</strong> separate system lubrication and cylinder lubrication roles.</div>
+              <div><strong>Shipboard systems</strong> include hydraulics, gears and compressors, each with its own viscosity logic.</div>
+              <div><strong>Marine credibility</strong> improves when the system is explained clearly, not just the product name.</div>
+            </div>
+          </div>
+          <div class="lab-section-media">
+            <img src="assets/golden-oil-and-marine-machinery.png" alt="Marine machinery and lubricant flow">
+          </div>
+        </section>
+
+        <section class="lab-section-card reverse" id="additives">
+          <div class="lab-section-copy">
+            <span class="lab-card-index">06</span>
+            <small>Additive chemistry</small>
+            <h2>The formulation toolbox behind performance.</h2>
+            <p>Base oil sets the platform, but additives deliver much of the real-world behaviour. In conversations with technical stakeholders, being able to explain these functions helps position the lubricant as a performance system rather than just a commodity fluid.</p>
+            <div class="lab-bullet-grid">
+              <div><strong>Detergent</strong> keeps surfaces cleaner.</div>
+              <div><strong>Dispersant</strong> holds contaminants in suspension.</div>
+              <div><strong>Anti-wear / EP</strong> protects under high contact stress.</div>
+              <div><strong>Antioxidant / VI improver</strong> supports ageing control and viscosity stability.</div>
+            </div>
+          </div>
+          <div class="lab-section-media">
+            <div class="lab-icon-grid">
+              <div><span>◎</span><strong>Detergent</strong><p>Surface cleanliness</p></div>
+              <div><span>◌</span><strong>Dispersant</strong><p>Contaminant control</p></div>
+              <div><span>◈</span><strong>Anti-wear</strong><p>Wear reduction</p></div>
+              <div><span>⚙</span><strong>EP</strong><p>Extreme pressure protection</p></div>
+              <div><span>✦</span><strong>Antioxidant</strong><p>Slower degradation</p></div>
+              <div><span>≋</span><strong>VI improver</strong><p>Viscosity stability</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lab-section-card" id="analysis">
+          <div class="lab-section-copy">
+            <span class="lab-card-index">07</span>
+            <small>Used-oil analysis mindset</small>
+            <h2>What I would examine before recommending action.</h2>
+            <p>Used-oil interpretation supports troubleshooting, condition monitoring and drain optimisation. Even at a commercial level, knowing what these indicators mean makes recommendations feel grounded and technically responsible.</p>
+            <div class="lab-bullet-grid">
+              <div><strong>Viscosity shift</strong> can signal shear, oxidation or contamination.</div>
+              <div><strong>Water</strong> often points to ingress, condensation or coolant concerns.</div>
+              <div><strong>Wear metals</strong> help flag component distress.</div>
+              <div><strong>TAN / TBN / oxidation</strong> indicate oil ageing and reserve health.</div>
+            </div>
+          </div>
+          <div class="lab-section-media">
+            <div class="lab-timeline-panel">
+              <div class="analysis-node"><b>Viscosity</b><span>grade health and oil condition</span></div>
+              <div class="analysis-node"><b>Water</b><span>moisture or coolant ingress risk</span></div>
+              <div class="analysis-node"><b>Wear metals</b><span>component wear monitoring</span></div>
+              <div class="analysis-node"><b>Oxidation / TAN / TBN</b><span>oil ageing and reserve tracking</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lab-section-card reverse" id="selection">
+          <div class="lab-section-copy">
+            <span class="lab-card-index">08</span>
+            <small>Practical selection framework</small>
+            <h2>A simple way to discuss lubricant selection with technical confidence.</h2>
+            <p>When the product range gets wide, a structured selection flow keeps the conversation useful. The right lubricant is usually the result of a logical sequence: understand the machine, understand the duty, narrow the viscosity, then validate against the application environment and OEM direction.</p>
+            <div class="lab-bullet-grid">
+              <div><strong>Step 1</strong> define machine type and lubrication point.</div>
+              <div><strong>Step 2</strong> map speed, load, temperature and contamination.</div>
+              <div><strong>Step 3</strong> determine suitable viscosity window and formulation needs.</div>
+              <div><strong>Step 4</strong> align with OEM guidance, economics and monitoring plan.</div>
+            </div>
+          </div>
+          <div class="lab-section-media">
+            <div class="selection-steps">
+              <div><span>1</span><strong>Machine</strong><p>what is being lubricated?</p></div>
+              <div><span>2</span><strong>Duty</strong><p>how hard and how hot does it run?</p></div>
+              <div><span>3</span><strong>Viscosity</strong><p>which grade and formulation fit?</p></div>
+              <div><span>4</span><strong>Validation</strong><p>confirm with OEM and performance expectation.</p></div>
+            </div>
           </div>
         </section>
       </div>
@@ -123,12 +242,16 @@
   <script>
     (function(){
       const cursor = document.getElementById('customCursor');
+      const label = cursor.querySelector('span');
       if (window.matchMedia('(pointer:fine)').matches && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         window.addEventListener('mousemove', function(event){
           cursor.style.transform = 'translate3d(' + event.clientX + 'px,' + event.clientY + 'px,0)';
           cursor.classList.add('is-active');
-          cursor.classList.toggle('is-link', !!event.target.closest('a, button'));
-          document.body.classList.toggle('cursor-over-link', !!event.target.closest('a, button'));
+          const clickable = event.target.closest('a, button');
+          cursor.classList.toggle('is-link', !!clickable);
+          document.body.classList.toggle('cursor-over-link', !!clickable);
+          const visibleLabel = clickable ? (clickable.dataset.cursor || clickable.textContent.replace(/\s+/g, ' ').trim()) : '';
+          label.textContent = visibleLabel || 'Open';
         }, {passive:true});
         document.documentElement.addEventListener('mouseleave', function(){
           cursor.classList.remove('is-active');

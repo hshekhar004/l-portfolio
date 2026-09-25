@@ -21,7 +21,7 @@ window.SITE_CONTENT = {
     "cursorImpact": "See impact",
     "cursorResume": "View résumé",
     "cursorScroll": "Scroll",
-    "cursorOpen": "Open",
+    "cursorOpen": "Open lab",
     "cursorExplore": "Explore",
     "cursorProof": "Proof",
     "cursorEmail": "Email",
@@ -59,6 +59,7 @@ window.SITE_CONTENT = {
     "role": "Senior Key Account Manager | Industrial Lubricants | Technical B2B Sales",
     "eyebrow": "INDUSTRIAL · HEAVY-DUTY · MARINE LUBRICATION · KEY ACCOUNT MANAGEMENT",
     "headline": "Lubrication expertise. Mechanical understanding. Commercial growth.",
+    "heroLines": ["Lubrication expertise.", "Mechanical understanding.", "Commercial growth."],
     "subheadline": "Technical B2B sales and mechanical engineering depth, with 7+ years in industrial lubricants, greases, base oils, heavy-duty applications and customer development.",
     "primaryButton": "Explore commercial impact",
     "secondaryButton": "View résumé",
@@ -73,10 +74,6 @@ window.SITE_CONTENT = {
     {
       "label": "Track record",
       "target": "track-record"
-    },
-    {
-      "label": "Lubrication Lab",
-      "href": "lubrication-lab.html"
     },
     {
       "label": "Skills",
@@ -97,6 +94,10 @@ window.SITE_CONTENT = {
     {
       "label": "About",
       "target": "about"
+    },
+    {
+      "label": "Lubrication Lab ↗",
+      "href": "lubrication-lab.html"
     }
   ],
   "sectionOrder": [

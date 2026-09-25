@@ -571,7 +571,12 @@ function renderHero() {
   const { brand } = state.content;
   text(byId('brandInitials'), brand.initials);
   text(byId('heroEyebrow'), brand.eyebrow);
-  text(byId('heroHeadline'), brand.headline);
+  const heroHeadline = byId('heroHeadline');
+  if (Array.isArray(brand.heroLines) && brand.heroLines.length) {
+    heroHeadline.innerHTML = brand.heroLines.map((line) => `<span class="hero-line">${line}</span>`).join('');
+  } else {
+    text(heroHeadline, brand.headline);
+  }
   text(byId('heroSubheadline'), brand.subheadline);
   text(byId('primaryButton'), brand.primaryButton);
   text(byId('resumeButton'), brand.secondaryButton);
