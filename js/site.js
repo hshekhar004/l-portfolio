@@ -570,7 +570,12 @@ const renderers = {
 function renderHero() {
   const { brand } = state.content;
   text(byId('brandInitials'), brand.initials);
-  text(byId('heroEyebrow'), brand.eyebrow);
+  const heroEyebrow = byId('heroEyebrow');
+  if (heroEyebrow) {
+    const primary = brand.eyebrowPrimary || 'KEY ACCOUNT MANAGEMENT';
+    const secondary = brand.eyebrowSecondary || 'Industrial · Heavy-duty · Marine lubrication';
+    heroEyebrow.innerHTML = `<span class="eyebrow-primary">${attr(primary)}</span><span class="eyebrow-secondary">${attr(secondary)}</span>`;
+  }
   const heroHeadline = byId('heroHeadline');
   if (Array.isArray(brand.heroLines) && brand.heroLines.length) {
     heroHeadline.innerHTML = brand.heroLines.map((line) => `<span class="hero-line">${line}</span>`).join('');
@@ -595,16 +600,14 @@ function renderHero() {
   document.querySelector('meta[name="description"]').content = state.content.meta.description;
   const hero = document.querySelector('.hero');
   if (!hero) return;
+  hero.querySelector('.hero-media')?.remove();
   hero.querySelector('.lubricant-hero-art')?.remove();
-  if (!hero.querySelector('.hero-media')) {
-    const media = document.createElement('div');
-    media.className = 'hero-media reveal';
-    media.setAttribute('aria-hidden', 'true');
-    media.innerHTML = `
-      <img src="assets/amber-oil-flow-over-interlocking-gears.png" alt="">
-      <div class="hero-media-glow"></div>
-      <div class="hero-media-chip">Industrial · Heavy-duty · Marine</div>`;
-    hero.appendChild(media);
+  if (!hero.querySelector('.hero-ambient')) {
+    const ambient = document.createElement('div');
+    ambient.className = 'hero-ambient reveal';
+    ambient.setAttribute('aria-hidden', 'true');
+    ambient.innerHTML = '<span class="ambient-orb"></span><span class="ambient-ring ring-a"></span><span class="ambient-ring ring-b"></span><span class="ambient-drop"></span>';
+    hero.appendChild(ambient);
   }
 }
 

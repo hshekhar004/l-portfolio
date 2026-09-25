@@ -7,7 +7,7 @@
   <meta name="theme-color" content="#090704">
   <meta name="description" content="Lubrication Lab: a visual handbook across industrial, heavy-duty and marine lubrication.">
   <title>Lubrication Lab | Himanshu Shekhar</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=5">
 </head>
 <body class="lab-page-body">
   <div class="lab-page-shell">
@@ -21,8 +21,11 @@
       <a href="#foundations">Foundations</a>
       <a href="#sae">SAE grades</a>
       <a href="#industrial">Industrial oils</a>
+      <a href="#grease">Grease</a>
+      <a href="#base-oils">Base oils</a>
       <a href="#hd">HD oils</a>
       <a href="#marine">Marine</a>
+      <a href="#adblue">AdBlue</a>
       <a href="#additives">Additives</a>
       <a href="#analysis">Analysis</a>
       <a href="#selection">Selection</a>
@@ -34,12 +37,15 @@
       <section class="lab-page-hero">
         <div>
           <span class="lab-page-kicker">A dedicated technical handbook page</span>
-          <h1>Lubrication knowledge presented like a premium field guide.</h1>
-          <p>This page is intentionally separate from the main portfolio so recruiters can experience the technical side without cluttering the commercial story. It covers core concepts, application logic and the kind of practical explanation that makes lubricant discussions credible.</p>
+          <h1>Lubrication knowledge presented as a structured field guide.</h1>
+          <p>This page is intentionally separate from the main portfolio so recruiters can experience the technical side without cluttering the commercial story. It covers core concepts, application logic and practical explanations in a cleaner, more spacious format.</p>
           <div class="lab-pill-row">
             <span>Tribology basics</span>
             <span>SAE viscosity</span>
             <span>ISO VG</span>
+            <span>Grease fundamentals</span>
+            <span>Base oils</span>
+            <span>AdBlue</span>
             <span>Heavy-duty diesel oils</span>
             <span>Marine lubrication</span>
             <span>Used-oil thinking</span>
@@ -114,9 +120,59 @@
           </div>
         </section>
 
-        <section class="lab-section-card reverse" id="hd">
+        <section class="lab-section-card reverse" id="grease">
           <div class="lab-section-copy">
             <span class="lab-card-index">04</span>
+            <small>Grease fundamentals</small>
+            <h2>Grease selection depends on thickener, base oil and operating condition.</h2>
+            <p>Grease is not just “thick oil”. It is a lubrication system built from base oil, thickener and additives. The correct grease depends on bearing speed, load, temperature, contamination, relubrication interval and sealing conditions.</p>
+            <div class="lab-bullet-grid">
+              <div><strong>Base oil</strong> provides the actual lubricating film once it is released into the contact zone.</div>
+              <div><strong>Thickener</strong> acts like the sponge or structure that holds the oil in place.</div>
+              <div><strong>NLGI consistency</strong> describes how soft or firm the grease is for the application.</div>
+              <div><strong>Application fit</strong> depends on speed, load, water exposure, dust and relubrication practice.</div>
+            </div>
+          </div>
+          <div class="lab-section-media">
+            <div class="lab-grease-panel">
+              <div class="lab-layer-card"><strong>Base oil</strong><span>film strength, viscosity and lubrication performance</span></div>
+              <div class="lab-layer-card"><strong>Thickener</strong><span>lithium, calcium, polyurea and other structure systems</span></div>
+              <div class="lab-layer-card"><strong>Additives</strong><span>anti-wear, EP, oxidation and corrosion protection</span></div>
+              <div class="lab-consistency-row">
+                <span>NLGI 00</span><span>NLGI 1</span><span>NLGI 2</span><span>NLGI 3</span>
+              </div>
+              <div class="lab-technical-note">A practical grease conversation normally asks: what is the bearing, how fast does it run, how heavily is it loaded, and what contamination does it see?</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lab-section-card" id="base-oils">
+          <div class="lab-section-copy">
+            <span class="lab-card-index">05</span>
+            <small>Base-oil foundation</small>
+            <h2>Base oil sets the platform on which the finished lubricant is built.</h2>
+            <p>When technical stakeholders ask about lubricant quality, base oil is one of the smartest places to begin. It influences oxidation stability, volatility, low-temperature flow, cleanliness and the overall room available for formulation design.</p>
+            <div class="lab-bullet-grid">
+              <div><strong>Group I</strong> more traditional mineral base oil, with wider solvency but lower performance versus later groups.</div>
+              <div><strong>Group II / III</strong> cleaner and more stable base stocks commonly used in many modern formulations.</div>
+              <div><strong>Group IV</strong> PAO-based synthetic platform known for strong low-temperature and oxidation behaviour.</div>
+              <div><strong>Group V</strong> specialty base stocks used for targeted formulation benefits or niche performance needs.</div>
+            </div>
+          </div>
+          <div class="lab-section-media">
+            <div class="lab-baseoil-grid">
+              <div><strong>Group I</strong><span>traditional mineral platform</span></div>
+              <div><strong>Group II</strong><span>better purity and oxidation stability</span></div>
+              <div><strong>Group III</strong><span>highly refined, strong modern mainstream base stock</span></div>
+              <div><strong>Group IV</strong><span>PAO synthetic with premium temperature behaviour</span></div>
+              <div><strong>Group V</strong><span>specialty chemistry for specific formulation roles</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="lab-section-card reverse" id="hd">
+          <div class="lab-section-copy">
+            <span class="lab-card-index">06</span>
             <small>Heavy-duty diesel oils</small>
             <h2>HD oils have to do more than lubricate.</h2>
             <p>In heavy-duty engines the lubricant also manages soot, deposit control, oxidation, acid neutralisation and cleanliness. That is why additive balance matters so much. A fleet-facing or industrial discussion becomes stronger when the duty profile is translated into lubricant function.</p>
@@ -143,7 +199,7 @@
 
         <section class="lab-section-card" id="marine">
           <div class="lab-section-copy">
-            <span class="lab-card-index">05</span>
+            <span class="lab-card-index">07</span>
             <small>Marine lubrication</small>
             <h2>Marine systems create a more layered lubrication discussion.</h2>
             <p>Marine lubrication is not one universal product conversation. Trunk piston engines, crosshead engines, cylinder oils, system oils, hydraulic systems, gears and compressors all bring different functional demands. Understanding that architecture makes commercial conversations more credible.</p>
@@ -159,9 +215,35 @@
           </div>
         </section>
 
+        <section class="lab-section-card reverse" id="adblue">
+          <div class="lab-section-copy">
+            <span class="lab-card-index">08</span>
+            <small>AdBlue / DEF basics</small>
+            <h2>AdBlue is not a lubricant, but it matters in heavy-duty fleet conversations.</h2>
+            <p>AdBlue, also known as Diesel Exhaust Fluid (DEF), supports SCR after-treatment systems in many modern diesel vehicles. Commercially, it often sits next to lubricant conversations because customers want one partner who understands both machine protection and emissions-support products.</p>
+            <div class="lab-bullet-grid">
+              <div><strong>What it is</strong> a 32.5% high-purity urea solution in demineralised water.</div>
+              <div><strong>What it does</strong> helps SCR systems reduce NOx emissions in the exhaust stream.</div>
+              <div><strong>Clean handling</strong> contamination control matters because product purity is critical.</div>
+              <div><strong>Storage thinking</strong> suitable packaging, cleanliness and temperature awareness support reliable use.</div>
+            </div>
+          </div>
+          <div class="lab-section-media">
+            <div class="lab-adblue-panel">
+              <div class="lab-adblue-stat"><strong>32.5%</strong><span>high-purity urea</span></div>
+              <div class="lab-callout-grid">
+                <div><strong>Role</strong><span>supports diesel after-treatment, not engine lubrication</span></div>
+                <div><strong>Commercial value</strong><span>relevant add-on product in fleet and industrial discussions</span></div>
+                <div><strong>Handling</strong><span>keep clean, dedicated equipment and avoid contamination</span></div>
+                <div><strong>Customer trust</strong><span>clear explanation reduces confusion between lubricants and emissions fluids</span></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="lab-section-card reverse" id="additives">
           <div class="lab-section-copy">
-            <span class="lab-card-index">06</span>
+            <span class="lab-card-index">09</span>
             <small>Additive chemistry</small>
             <h2>The formulation toolbox behind performance.</h2>
             <p>Base oil sets the platform, but additives deliver much of the real-world behaviour. In conversations with technical stakeholders, being able to explain these functions helps position the lubricant as a performance system rather than just a commodity fluid.</p>
@@ -186,7 +268,7 @@
 
         <section class="lab-section-card" id="analysis">
           <div class="lab-section-copy">
-            <span class="lab-card-index">07</span>
+            <span class="lab-card-index">10</span>
             <small>Used-oil analysis mindset</small>
             <h2>What I would examine before recommending action.</h2>
             <p>Used-oil interpretation supports troubleshooting, condition monitoring and drain optimisation. Even at a commercial level, knowing what these indicators mean makes recommendations feel grounded and technically responsible.</p>
@@ -209,7 +291,7 @@
 
         <section class="lab-section-card reverse" id="selection">
           <div class="lab-section-copy">
-            <span class="lab-card-index">08</span>
+            <span class="lab-card-index">11</span>
             <small>Practical selection framework</small>
             <h2>A simple way to discuss lubricant selection with technical confidence.</h2>
             <p>When the product range gets wide, a structured selection flow keeps the conversation useful. The right lubricant is usually the result of a logical sequence: understand the machine, understand the duty, narrow the viscosity, then validate against the application environment and OEM direction.</p>
