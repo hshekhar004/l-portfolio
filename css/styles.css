@@ -665,6 +665,9 @@ body {
   z-index: 2;
   max-width: min(640px, 48vw);
 }
+.hero > .hero-copy > .eyebrow {
+  font-size: 1.48rem;
+}
 .hero-title {
   max-width: 10ch;
   font-size: clamp(2.9rem, 5.35vw, 5.35rem);
