@@ -1257,3 +1257,100 @@ body {
     margin-top: 12px;
   }
 }
+
+
+
+/* ===== Rework v4: cleaner self-marketing hero ===== */
+.hero {
+  min-height: calc(100svh - var(--header-height));
+  padding-top: calc(var(--header-height) + 46px);
+  padding-bottom: 54px;
+}
+.hero::before {
+  width: 720px;
+  height: 720px;
+  right: -250px;
+  top: 8%;
+  opacity: .12;
+  filter: blur(.4px) saturate(1.02);
+}
+.hero::after {
+  left: 38%;
+  right: -8%;
+  bottom: -130px;
+  height: 280px;
+  background: radial-gradient(55% 100% at 50% 100%, rgba(182,106,22,.12), transparent 72%);
+}
+.hero-copy {
+  max-width: min(760px, 62vw);
+  padding-right: 40px;
+}
+.hero-title {
+  max-width: 9.6ch;
+  font-size: clamp(3rem, 5.8vw, 5.7rem);
+  line-height: .92;
+  letter-spacing: -.065em;
+}
+.hero-line + .hero-line { margin-top: .16em; }
+.hero-title::after {
+  width: 148px;
+  margin-top: 26px;
+}
+.hero-subtitle {
+  max-width: 720px;
+  margin-top: 34px;
+  font-size: clamp(1.04rem, 1.28vw, 1.22rem);
+  line-height: 1.65;
+}
+.hero-actions { margin-top: 34px; }
+.hero-media { display: none !important; }
+.scroll-cue { bottom: 16px; }
+
+/* subtle blended motion so the hero feels alive without a cutout image */
+.hero-copy::after {
+  content: "";
+  position: absolute;
+  right: -110px;
+  top: 52%;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 30% 30%, rgba(255,243,214,.9), rgba(214,154,67,.28) 32%, rgba(214,154,67,.06) 62%, transparent 72%);
+  filter: blur(2px);
+  opacity: .32;
+  animation: heroGlow 5.5s ease-in-out infinite;
+  pointer-events: none;
+}
+.hero-copy::before {
+  content: "";
+  position: absolute;
+  right: -20px;
+  bottom: 28px;
+  width: 360px;
+  height: 140px;
+  border-radius: 100% 0 100% 0 / 100% 0 100% 0;
+  background: linear-gradient(120deg, rgba(167,96,18,0), rgba(193,126,42,.12), rgba(241,205,137,.16), rgba(167,96,18,0));
+  transform: rotate(-8deg);
+  filter: blur(18px);
+  opacity: .55;
+  animation: heroFlow 8s ease-in-out infinite;
+  pointer-events: none;
+}
+@keyframes heroGlow {
+  0%,100% { transform: translateY(0px) scale(1); opacity: .26; }
+  50% { transform: translateY(-12px) scale(1.05); opacity: .38; }
+}
+@keyframes heroFlow {
+  0%,100% { transform: rotate(-8deg) translateX(0); }
+  50% { transform: rotate(-12deg) translateX(12px); }
+}
+
+@media (max-width: 900px) {
+  .hero-copy { max-width: 100%; padding-right: 0; }
+}
+@media (max-width: 720px) {
+  .hero-title { max-width: 100%; font-size: clamp(2.5rem, 12vw, 4.2rem); }
+  .hero-subtitle { margin-top: 28px; }
+  .hero-copy::before,
+  .hero-copy::after { display: none; }
+}
